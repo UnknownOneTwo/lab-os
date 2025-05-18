@@ -7,3 +7,7 @@
 ## 2025-05-17 18:47
 
 - Added backup rotation script to LAB-NODE-01
+
+## 2025-05-17 18:49
+
+- I have started to add changelog note personally
