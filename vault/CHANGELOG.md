@@ -11,3 +11,7 @@
 ## 2025-05-17 18:49
 
 - I have started to add changelog note personally
+
+## [V1.3] — 2025-05-17 18:55
+
+- Note V1.3
