@@ -18,14 +18,14 @@ SERVER_OVERVIEW_MARKDOWN = """
 
 ## 🧩 Nodes
 
-- **LAB-NODE-01**
+- **node-core-01**
   ▸ 🏷️ Role: Infrastructure  
   ▸ 💽 Disk: 1TB NVMe  
   ▸ 🧠 RAM: 62 GB  
   ▸ 🔌 IP: `192.168.10.100`  
   ▸ 📦 Services: InfluxDB, Grafana, Backups
 
-- **GAME-NODE-01**
+- **node-game-01**
   ▸ 🏷️ Role: Game Server  
   ▸ 💽 Disk: 480 GB NVMe  
   ▸ 🧠 RAM: 31 GB  

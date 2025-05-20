@@ -54,8 +54,8 @@ It will:
 
 | Node        | Role           | RAM     | Disk       | IP              |
 |-------------|----------------|---------|------------|-----------------|
-| LAB-NODE-01 | Infrastructure | 62 GB   | 1 TB NVMe  | `192.168.10.100` |
-| GAME-NODE-01| Game Server    | 31 GB   | 480 GB NVMe| `192.168.10.200` |
+| node-core-01 | Infrastructure | 62 GB   | 1 TB NVMe  | `192.168.10.100` |
+| node-game-01| Game Server    | 31 GB   | 480 GB NVMe| `192.168.10.200` |
 
 ---
 

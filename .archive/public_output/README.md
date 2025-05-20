@@ -13,8 +13,8 @@ This project integrates **Proxmox VE**, **Docker**, **Grafana**, and a local **O
 
 | Node         | Role         | IP              | Specs                               | Services                          |
 |--------------|--------------|------------------|--------------------------------------|-----------------------------------|
-| LAB-NODE-01  | Infra Core   | 192.168.10.100  | HP EliteDesk 800 G3, 62GB RAM, 1TB NVMe | InfluxDB, Grafana, Ubuntu VM      |
-| GAME-NODE-01 | Game Servers | 192.168.10.200  | HP EliteDesk 800 G3, 31GB RAM, 480GB NVMe | Docker, Minecraft, Pterodactyl    |
+| node-core-01  | Infra Core   | 192.168.10.100  | HP EliteDesk 800 G3, 62GB RAM, 1TB NVMe | InfluxDB, Grafana, Ubuntu VM      |
+| node-game-01 | Game Servers | 192.168.10.200  | HP EliteDesk 800 G3, 31GB RAM, 480GB NVMe | Docker, Minecraft, Pterodactyl    |
 | RTX PC       | AI Inference | 192.168.10.xxx  | RTX 3080, Windows 11                 | Ollama + LLaMA3                   |
 
 ---
@@ -61,7 +61,7 @@ This project integrates **Proxmox VE**, **Docker**, **Grafana**, and a local **O
 | Aspect         | Detail                                                                 |
 |----------------|------------------------------------------------------------------------|
 | Deployment     | Docker container (preferred) or Pterodactyl                            |
-| Node           | GAME-NODE-01                                                           |
+| Node           | node-game-01                                                           |
 | ZIP Uploaded   | `ServerFiles-2.47.zip`                                                 |
 | Notes          | High RAM needs (8–12GB+), mod-heavy, shaders/quests enabled            |
 
