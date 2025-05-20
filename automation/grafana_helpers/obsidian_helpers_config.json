@@ -1,0 +1,8 @@
+{
+  "vault_root": "C:/Users/Steve/Documents/ObsidianVaults/MainVault",
+  "projects_folder": "Projects",
+  "changelog_path": "Changelog/CHANGELOG.md",
+  "logs_folder": "SystemLogs",
+  "default_summary_format": "markdown",
+  "auto_tag_prefix": "project_"
+}

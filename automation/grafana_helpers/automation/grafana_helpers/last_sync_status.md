@@ -1,0 +1,1 @@
+![Last Sync](https://img.shields.io/badge/last--sync-2025-05-19--23%3A59%3A39-blue?style=flat-square&logo=grafana)

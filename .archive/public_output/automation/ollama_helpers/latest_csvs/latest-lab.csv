@@ -1,0 +1,2 @@
+VMID,Name,Type,Tags,Notes
+103,vm-103,VM,"dev, sandbox, test","This VM is perfect for building and testing software projects. With 2 CPU cores and 4GB of RAM, it's a great sandbox to play around with new ideas and troubleshoot code issues. It comes pre-installed with Debian and has a few virtual disks set up, so you can get started right away!"
