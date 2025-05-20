@@ -1,102 +1,97 @@
-# 🧠 Proxmox + AI-Powered Home Lab  
-Self-healing, AI-enhanced infrastructure using Proxmox VE, RTX 3080, and local LLMs
+# 🧠 Proxmox Home Lab — AI-Powered Automation
+
+Welcome to my personal home lab, built on **Proxmox VE**, with integrated tools for AI-driven insights, automated monitoring, and structured documentation. This setup merges **Obsidian**, **Grafana**, and **Python** to track system health, logs, and project metadata — with everything managed from a unified source.
 
 ---
 
-## 🔧 Project Summary
+## 🚀 Key Features
 
-This project integrates **Proxmox VE**, **Docker**, **Grafana**, and a local **Ollama (LLaMA3)** model to build an automated, AI-supported home lab. The goal: a **resilient, modular, and insightful system** for managing infrastructure, game servers, backups, and telemetry — with natural language tools and version tracking.
-
----
-
-## 🖥️ Cluster Overview
-
-| Node         | Role         | IP              | Specs                               | Services                          |
-|--------------|--------------|------------------|--------------------------------------|-----------------------------------|
-| LAB-NODE-01  | Infra Core   | 192.168.10.100  | HP EliteDesk 800 G3, 62GB RAM, 1TB NVMe | InfluxDB, Grafana, Ubuntu VM      |
-| GAME-NODE-01 | Game Servers | 192.168.10.200  | HP EliteDesk 800 G3, 31GB RAM, 480GB NVMe | Docker, Minecraft, Pterodactyl    |
-| RTX PC       | AI Inference | 192.168.10.xxx  | RTX 3080, Windows 11                 | Ollama + LLaMA3                   |
+- **💡 Obsidian AI Integration** – Markdown summaries of logs, OneDrive files, and system projects.
+- **📊 Grafana Dashboards** – Live panels updated with AI-generated summaries and changelogs.
+- **📝 Weekly Sync Automation** – Scheduled via Task Scheduler + `.bat` helpers.
+- **📁 Structured Vault** – Logs, summaries, and project notes in Obsidian’s `MainVault`.
+- **⚙️ Proxmox Clustering** – 2-node setup with game and infrastructure isolation.
 
 ---
 
-## 🤖 AI Integration
+## 📁 Folder Structure
 
-### ✅ Completed Scripts
-| Script                           | Description                                                                 |
-|----------------------------------|-----------------------------------------------------------------------------|
-| `proxmox_helper_ai_backups.sh`  | Summarizes LXC/VM backup info via AI                                        |
-| `proxmox_helper_ai_vmstatus.sh` | Describes system status in natural language                                 |
-| `proxmox_helper_ai_resources.sh`| Reports live RAM/CPU/disk usage                                             |
-| `proxmox_tag_note_generator.py` | Tags Proxmox VMs/CTs using AI + stores results to CSV                       |
-
-### 🧪 Features in Progress
-- `--log` / `--note` / `--debug` flags for all scripts
-- Cached responses for faster CLI performance
-- GitHub changelog integration
-- Future scripts to be developed in alphabetical order
-
----
-
-## 📊 Grafana Dashboard
-
-### ✅ Integrated with InfluxDB
-- Real-time monitoring for:
-  - 🔥 CPU
-  - 🧠 RAM
-  - 💽 Disk
-  - 🌡️ Temps
-  - 📡 Network
-
-### 📝 Changelog Panel
-- Title: `📝 Changelog`
-- CLI updatable: version, timestamp, and optional notes
-- Append-only `changelog.txt` file (local)
-- Future: Push changelog data to GitHub automatically
+```
+proxmox-homelab/
+├── automation/
+│   ├── grafana_helpers/
+│   │   ├── sync_project_index_to_grafana.py
+│   │   ├── sync_changelog_to_grafana.py
+│   │   ├── update_last_sync_badge.py
+│   │   ├── sync_all_to_grafana.bat
+│   │   ├── last_sync_status.md
+│   ├── obsidian_helpers/
+│   │   ├── summarize_onedrive_files.py
+│   │   ├── summarize_system_logs.py
+│   │   ├── generate_project_index.py
+│   │   ├── shared_config_loader.py
+│   │   └── obsidian_helpers_config.json
+```
 
 ---
 
-## 🗃️ Minecraft Game Server
+## 🔧 How to Sync Grafana Panels
 
-### ATM10 Server (Neoforge, 470+ mods)
-| Aspect         | Detail                                                                 |
-|----------------|------------------------------------------------------------------------|
-| Deployment     | Docker container (preferred) or Pterodactyl                            |
-| Node           | GAME-NODE-01                                                           |
-| ZIP Uploaded   | `ServerFiles-2.47.zip`                                                 |
-| Notes          | High RAM needs (8–12GB+), mod-heavy, shaders/quests enabled            |
+Use the `.bat` launcher to sync **everything**:
 
----
+```bash
+automation/grafana_helpers/sync_all_to_grafana.bat
+```
 
-## ❌ Deprecated or Paused
-
-### 📁 Document Tagging Project (OneDrive)
-- Used Ollama to tag `.pdf` / `.docx` files
-- Results saved to `file_index_with_tags.csv`
-- Outcome: Script for file moving failed repeatedly, phase paused
+It will:
+- Push the latest project index to 🧠 Panel 105
+- Push the changelog to 📝 Panel 102
+- Update your sync badge and push it to GitHub
 
 ---
 
-## 📚 Tools and Preferences
+## 🧪 System Overview
 
-| Tool              | Notes                                                                 |
-|-------------------|-----------------------------------------------------------------------|
-| Ollama (LLaMA3)   | Local LLM for summaries and tagging                                   |
-| SecureCRT         | Secure terminal access to Proxmox nodes                              |
-| WinSCP            | File transfer utility (Windows)                                       |
-| GitHub            | Versioning, logs, changelogs                                          |
-| Proxmox Scripts   | Based on best practices from [ProxmoxVE Community Scripts](https://community-scripts.github.io/ProxmoxVE/) |
+| Node        | Role           | RAM     | Disk       | IP              |
+|-------------|----------------|---------|------------|-----------------|
+| LAB-NODE-01 | Infrastructure | 62 GB   | 1 TB NVMe  | `192.168.10.100` |
+| GAME-NODE-01| Game Server    | 31 GB   | 480 GB NVMe| `192.168.10.200` |
 
 ---
 
-## 🧪 Development Philosophy
+## 📊 Sync Status
 
-- ✅ *Rebuild from scratch if stuck*
-- ✅ *Step-by-step verification*
-- ✅ *Scripts must log and self-describe*
-- ⚠️ *GUI optional, CLI prioritized*
-- ❌ *Avoid hardcoded values or AI hallucination risk*
+[![](automation/grafana_helpers/last_sync_status.md)](automation/grafana_helpers/last_sync_status.md)
 
 ---
 
-## 📦 File Structure (WIP)
+## 📚 Project Notes
 
+All AI-generated notes and markdown live in:
+```
+C:\\Users\\Steve\\Documents\\ObsidianVaults\\MainVault\\
+```
+
+Use Obsidian to explore:
+- `Projects/` for indexed summaries
+- `Changelog/` for synced updates
+- `SystemLogs/` for log summaries
+
+---
+
+## 🤖 AI-Powered by
+
+- **Ollama** – Local LLaMA3 models for markdown summarization
+- **Python 3.11** – Clean helper scripts with shared config
+- **Grafana + InfluxDB** – Live dashboards with text + metric panels
+
+---
+
+## ☁️ Hosted At
+
+- Domain: [`stevenjvik.tech`](https://stevenjvik.tech)
+- GitHub: [`UnknownOneTwo/proxmox-homelab`](https://github.com/UnknownOneTwo/proxmox-homelab)
+
+---
+
+> Built with ❤️ by Steven Vik — Gemini, gamer, and geek 🧠
