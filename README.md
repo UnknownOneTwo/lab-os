@@ -1,97 +1,124 @@
-# 🧠 Proxmox Home Lab — AI-Powered Automation
+# ⚡ lab-os
 
-Welcome to my personal home lab, built on **Proxmox VE**, with integrated tools for AI-driven insights, automated monitoring, and structured documentation. This setup merges **Obsidian**, **Grafana**, and **Python** to track system health, logs, and project metadata — with everything managed from a unified source.
+A modular, AI-assisted home network stack built with Grafana, Proxmox, and Python automation.
 
----
+This repo contains:
+- Static HTML homepage for GitHub Pages
+- Project documentation index
+- Public dashboards and markdown assets
 
-## 🚀 Key Features
+🔒 Internal automation lives in a private secured repository.
 
-- **💡 Obsidian AI Integration** – Markdown summaries of logs, OneDrive files, and system projects.
-- **📊 Grafana Dashboards** – Live panels updated with AI-generated summaries and changelogs.
-- **📝 Weekly Sync Automation** – Scheduled via Task Scheduler + `.bat` helpers.
-- **📁 Structured Vault** – Logs, summaries, and project notes in Obsidian’s `MainVault`.
-- **⚙️ Proxmox Clustering** – 2-node setup with game and infrastructure isolation.
-
----
-
-## 📁 Folder Structure
-
-```
-proxmox-homelab/
-├── automation/
-│   ├── grafana_helpers/
-│   │   ├── sync_project_index_to_grafana.py
-│   │   ├── sync_changelog_to_grafana.py
-│   │   ├── update_last_sync_badge.py
-│   │   ├── sync_all_to_grafana.bat
-│   │   ├── last_sync_status.md
-│   ├── obsidian_helpers/
-│   │   ├── summarize_onedrive_files.py
-│   │   ├── summarize_system_logs.py
-│   │   ├── generate_project_index.py
-│   │   ├── shared_config_loader.py
-│   │   └── obsidian_helpers_config.json
-```
+🔗 [GitHub Pages Homepage](https://unknownonetwo.github.io/lab-os)
 
 ---
+## 🔁 Synced Overview for Public Repos
 
-## 🔧 How to Sync Grafana Panels
+This repo powers:
 
-Use the `.bat` launcher to sync **everything**:
+- [LabOS](https://github.com/UnknownOneTwo/lab-os) – main dashboard
+- [LabOS Templates](https://github.com/UnknownOneTwo/lab-os-templates) – automation patterns
+- [LabOS Dev Web](https://github.com/UnknownOneTwo/lab-os-dev-web) – preview builds
 
-```bash
-automation/grafana_helpers/sync_all_to_grafana.bat
-```
+It contains secure logic that:
+- Summarizes logs and metrics
+- Injects updates into Grafana and Obsidian
+- Automates tagging, backups, and changelogs
 
-It will:
-- Push the latest project index to 🧠 Panel 105
-- Push the changelog to 📝 Panel 102
-- Update your sync badge and push it to GitHub
-
----
-
-## 🧪 System Overview
-
-| Node        | Role           | RAM     | Disk       | IP              |
-|-------------|----------------|---------|------------|-----------------|
-| node-core-01 | Infrastructure | 62 GB   | 1 TB NVMe  | `192.168.10.100` |
-| node-game-01| Game Server    | 31 GB   | 480 GB NVMe| `192.168.10.200` |
+> _Only safe content is synced. No private keys, internal paths, or sensitive logic are exposed._
 
 ---
+## 🔁 Synced Overview for Public Repos
 
-## 📊 Sync Status
+This repo powers:
 
-[![](automation/grafana_helpers/last_sync_status.md)](automation/grafana_helpers/last_sync_status.md)
+- [LabOS](https://github.com/UnknownOneTwo/lab-os) – main dashboard
+- [LabOS Templates](https://github.com/UnknownOneTwo/lab-os-templates) – automation patterns
+- [LabOS Dev Web](https://github.com/UnknownOneTwo/lab-os-dev-web) – preview builds
 
----
+It contains secure logic that:
+- Summarizes logs and metrics
+- Injects updates into Grafana and Obsidian
+- Automates tagging, backups, and changelogs
 
-## 📚 Project Notes
-
-All AI-generated notes and markdown live in:
-```
-C:\\Users\\Steve\\Documents\\ObsidianVaults\\MainVault\\
-```
-
-Use Obsidian to explore:
-- `Projects/` for indexed summaries
-- `Changelog/` for synced updates
-- `SystemLogs/` for log summaries
+> _Only safe content is synced. No private keys, internal paths, or sensitive logic are exposed._
 
 ---
+## 🔁 Synced Overview for Public Repos
 
-## 🤖 AI-Powered by
+This repo powers:
 
-- **Ollama** – Local LLaMA3 models for markdown summarization
-- **Python 3.11** – Clean helper scripts with shared config
-- **Grafana + InfluxDB** – Live dashboards with text + metric panels
+- [LabOS](https://github.com/UnknownOneTwo/lab-os) – main dashboard
+- [LabOS Templates](https://github.com/UnknownOneTwo/lab-os-templates) – automation patterns
+- [LabOS Dev Web](https://github.com/UnknownOneTwo/lab-os-dev-web) – preview builds
+
+It contains secure logic that:
+- Summarizes logs and metrics
+- Injects updates into Grafana and Obsidian
+- Automates tagging, backups, and changelogs
+
+> _Only safe content is synced. No private keys, internal paths, or sensitive logic are exposed._
 
 ---
+## 🔁 Synced Overview for Public Repos
 
-## ☁️ Hosted At
+This repo powers:
 
-- Domain: [`stevenjvik.tech`](https://stevenjvik.tech)
-- GitHub: [`UnknownOneTwo/proxmox-homelab`](https://github.com/UnknownOneTwo/proxmox-homelab)
+- [LabOS](https://github.com/UnknownOneTwo/lab-os) – main dashboard
+- [LabOS Templates](https://github.com/UnknownOneTwo/lab-os-templates) – automation patterns
+- [LabOS Dev Web](https://github.com/UnknownOneTwo/lab-os-dev-web) – preview builds
+
+It contains secure logic that:
+- Summarizes logs and metrics
+- Injects updates into Grafana and Obsidian
+- Automates tagging, backups, and changelogs
+
+> _Only safe content is synced. No private keys, internal paths, or sensitive logic are exposed._
 
 ---
+## 🔁 Synced Overview for Public Repos
 
-> Built with ❤️ by Steven Vik — Gemini, gamer, and geek 🧠
+This repo powers:
+
+- [LabOS](https://github.com/UnknownOneTwo/lab-os) – main dashboard
+- [LabOS Templates](https://github.com/UnknownOneTwo/lab-os-templates) – automation patterns
+- [LabOS Dev Web](https://github.com/UnknownOneTwo/lab-os-dev-web) – preview builds
+
+It contains secure logic that:
+- Summarizes logs and metrics
+- Injects updates into Grafana and Obsidian
+- Automates tagging, backups, and changelogs
+
+> _Only safe content is synced. No private keys, internal paths, or sensitive logic are exposed._
+
+---
+## 🔁 Synced Overview for Public Repos
+
+This repo powers:
+
+- [LabOS](https://github.com/UnknownOneTwo/lab-os) – main dashboard
+- [LabOS Templates](https://github.com/UnknownOneTwo/lab-os-templates) – automation patterns
+- [LabOS Dev Web](https://github.com/UnknownOneTwo/lab-os-dev-web) – preview builds
+
+It contains secure logic that:
+- Summarizes logs and metrics
+- Injects updates into Grafana and Obsidian
+- Automates tagging, backups, and changelogs
+
+> _Only safe content is synced. No private keys, internal paths, or sensitive logic are exposed._
+
+---
+## 🔁 Synced Overview for Public Repos
+
+This repo powers:
+
+- [LabOS](https://github.com/UnknownOneTwo/lab-os) – main dashboard
+- [LabOS Templates](https://github.com/UnknownOneTwo/lab-os-templates) – automation patterns
+- [LabOS Dev Web](https://github.com/UnknownOneTwo/lab-os-dev-web) – preview builds
+
+It contains secure logic that:
+- Summarizes logs and metrics
+- Injects updates into Grafana and Obsidian
+- Automates tagging, backups, and changelogs
+
+> _Only safe content is synced. No private keys, internal paths, or sensitive logic are exposed._
