@@ -26,7 +26,14 @@
     <header id="header">
       <div class="logo">
         <span class="icon fa-terminal"></span>
-      </div>
+      <article id="ai-summary">
+  <h2 class="major">AI System Summary</h2>
+  <span class="image main"><img src="images/pic03.jpg" alt="AI panel" /></span>
+  <div id="summary-content">
+    <p><em>Loading AI-generated summary from Ollama...</em></p>
+  </div>
+</article>
+</div>
       <div class="content">
         <div class="inner">
           <h1>LabOS</h1>
@@ -43,7 +50,8 @@
         <li><a href="#vault">Vault</a></li>
         <li><a href="Steven_Vik_Resume.pdf" target="_blank">Resume</a></li>
         <li><a href="https://github.com/UnknownOneTwo" target="_blank">GitHub</a></li>
-      </ul>
+        <li><a href="#ai-summary">AI Summary</a></li>
+</ul>
     </nav>
 
     <!-- 🔥 Main Panels -->
@@ -75,5 +83,25 @@
   <script src="assets/js/breakpoints.min.js"></script>
   <script src="assets/js/util.js"></script>
   <script src="assets/js/main.js"></script>
+<script>
+  fetch('index.md')
+    .then(response => response.text())
+    .then(text => {
+      const summaryBlock = document.getElementById('summary-content');
+      summaryBlock.innerHTML = text
+        .replace(/^### (.*$)/gim, '<h3>$1</h3>')
+        .replace(/^## (.*$)/gim, '<h2>$1</h2>')
+        .replace(/^# (.*$)/gim, '<h1>$1</h1>')
+        .replace(/^> (.*$)/gim, '<blockquote>$1</blockquote>')
+        .replace(/\*\*(.*?)\*\*/gim, '<strong>$1</strong>')
+        .replace(/\*(.*?)\*/gim, '<em>$1</em>')
+        .replace(/
+/gim, '<br />');
+    })
+    .catch(err => {
+      document.getElementById('summary-content').innerHTML =
+        '<p>⚠️ Error loading AI summary.</p>';
+    });
+</script>
 </body>
 </html>
