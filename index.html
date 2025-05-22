@@ -2,58 +2,78 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>lab-os : Steven Vik</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    body {
-      background-color: #0d0d0d;
-      color: #00ffe1;
-      font-family: 'Courier New', Courier, monospace;
-      padding: 2rem;
-      line-height: 1.6;
-    }
-    h1, h2 {
-      color: #ff00cc;
-    }
-    a {
-      color: #00ffe1;
-      text-decoration: none;
-    }
-    a:hover {
-      text-shadow: 0 0 5px #ff00cc;
-    }
-    .box {
-      border: 1px solid #00ffe1;
-      padding: 1rem;
-      margin-top: 2rem;
-      background: rgba(255, 255, 255, 0.02);
-      border-radius: 8px;
-    }
-  </style>
+  <title>LabOS – Steven Vik's Cyberpunk Dashboard</title>
+
+  <!-- ✅ FAVICON + PWA SETUP -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <meta name="msapplication-TileColor" content="#0f0f0f">
+  <meta name="theme-color" content="#0f0f0f">
+
+  <!-- 💅 Cyberpunk Theme CSS -->
+  <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css"></noscript>
 </head>
-<body>
-  <h1>💻 lab-os :: Cyberpunk Homelab</h1>
-  <p>Welcome to the public project site for <strong>lab-os</strong>, built and maintained by <strong>Steven Vik</strong>.</p>
 
-  <div class="box">
-    <h2>🧠 Nodes</h2>
-    <ul>
-      <li><strong>console-alpha</strong> — Main command & control terminal</li>
-      <li><strong>node-core-01</strong> — Infrastructure (Grafana, InfluxDB, backups)</li>
-      <li><strong>node-game-01</strong> — Game servers (ATM10, Pterodactyl)</li>
-      <li><em>node-ai-01, node-vault-01</em> — Coming soon</li>
-    </ul>
+<body class="is-preload">
+  <div id="wrapper">
+    <!-- 🎯 Hero Section -->
+    <header id="header">
+      <div class="logo">
+        <span class="icon fa-terminal"></span>
+      </div>
+      <div class="content">
+        <div class="inner">
+          <h1>LabOS</h1>
+          <p>⚡ Cyberpunk Homelab Dashboard powered by Ollama + AI<br />
+             💻 Built by Steven Vik | RTX 3080 | Proxmox | Python | GitHub</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- 🧭 Navigation -->
+    <nav>
+      <ul>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#vault">Vault</a></li>
+        <li><a href="Steven_Vik_Resume.pdf" target="_blank">Resume</a></li>
+        <li><a href="https://github.com/UnknownOneTwo" target="_blank">GitHub</a></li>
+      </ul>
+    </nav>
+
+    <!-- 🔥 Main Panels -->
+    <div id="main">
+      <article id="projects">
+        <h2 class="major">Projects</h2>
+        <span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+        <p>Explore all active and archived automation, monitoring, and AI integrations across the LabOS network.</p>
+      </article>
+
+      <article id="vault">
+        <h2 class="major">Vault</h2>
+        <span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+        <p>This is the public vault: GitHub Pages + Grafana + Obsidian summaries and changelogs synced in real time.</p>
+      </article>
+    </div>
+
+    <!-- 👣 Footer -->
+    <footer id="footer">
+      <p class="copyright">
+        &copy; 2025 Steven Vik. Powered by Cyberpunk, Coffee, and Curiosity.
+      </p>
+    </footer>
   </div>
 
-  <div class="box">
-    <h2>📝 Changelog</h2>
-    <p><a href="vault/CHANGELOG.md">View the latest updates</a></p>
-  </div>
-
-  <div class="box">
-    <h2>📁 GitHub Repository</h2>
-    <p><a href="https://github.com/UnknownOneTwo/lab-os" target="_blank">github.com/UnknownOneTwo/lab-os</a></p>
-  </div>
-
+  <!-- 🚀 Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
