@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LabOS – Steven Vik's Cyberpunk Dashboard</title>
+
+  <!-- ✅ FAVICON + PWA SETUP -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <meta name="msapplication-TileColor" content="#0f0f0f">
+  <meta name="theme-color" content="#0f0f0f">
+
+  <!-- 💅 Cyberpunk Theme CSS -->
+  <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css"></noscript>
+</head>
+
+<body class="is-preload">
+  <div id="wrapper">
+    <!-- 🎯 Hero Section -->
+    <header id="header">
+      <div class="logo">
+        <span class="icon fa-terminal"></span>
+      <article id="ai-summary">
+  <h2 class="major">AI System Summary</h2>
+  <span class="image main"><img src="images/pic03.jpg" alt="AI panel" /></span>
+  <div id="summary-content">
+    <p><em>Loading AI-generated summary from Ollama...</em></p>
+  </div>
+</article>
+</div>
+      <div class="content">
+        <div class="inner">
+          <h1>LabOS</h1>
+          <p>⚡ Cyberpunk Homelab Dashboard powered by Ollama + AI<br />
+             💻 Built by Steven Vik | RTX 3080 | Proxmox | Python | GitHub</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- 🧭 Navigation -->
+    <nav>
+      <ul>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#vault">Vault</a></li>
+        <li><a href="Steven_Vik_Resume.pdf" target="_blank">Resume</a></li>
+        <li><a href="https://github.com/UnknownOneTwo" target="_blank">GitHub</a></li>
+        <li><a href="#ai-summary">AI Summary</a></li>
+</ul>
+    </nav>
+
+    <!-- 🔥 Main Panels -->
+    <div id="main">
+      <article id="projects">
+        <h2 class="major">Projects</h2>
+        <span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+        <p>Explore all active and archived automation, monitoring, and AI integrations across the LabOS network.</p>
+      </article>
+
+      <article id="vault">
+        <h2 class="major">Vault</h2>
+        <span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+        <p>This is the public vault: GitHub Pages + Grafana + Obsidian summaries and changelogs synced in real time.</p>
+      </article>
+    </div>
+
+    <!-- 👣 Footer -->
+    <footer id="footer">
+      <p class="copyright">
+        &copy; 2025 Steven Vik. Powered by Cyberpunk, Coffee, and Curiosity.
+      </p>
+    </footer>
+  </div>
+
+  <!-- 🚀 Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+<script>
+  fetch('index.md')
+    .then(response => response.text())
+    .then(text => {
+      const summaryBlock = document.getElementById('summary-content');
+      summaryBlock.innerHTML = text
+        .replace(/^### (.*$)/gim, '<h3>$1</h3>')
+        .replace(/^## (.*$)/gim, '<h2>$1</h2>')
+        .replace(/^# (.*$)/gim, '<h1>$1</h1>')
+        .replace(/^> (.*$)/gim, '<blockquote>$1</blockquote>')
+        .replace(/\*\*(.*?)\*\*/gim, '<strong>$1</strong>')
+        .replace(/\*(.*?)\*/gim, '<em>$1</em>')
+        .replace(/
+/gim, '<br />');
+    })
+    .catch(err => {
+      document.getElementById('summary-content').innerHTML =
+        '<p>⚠️ Error loading AI summary.</p>';
+    });
+</script>
+</body>
+</html>
